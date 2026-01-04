@@ -145,7 +145,7 @@ body {
 
 .mobile-login {
   color: #ccc;
-  margin-bottom: 270px;
+  margin-bottom: 20px;
   display: block;
   text-decoration: none;
 }
@@ -158,8 +158,10 @@ body {
   display: block;
   width: 100%;
   text-align: center;
-  position: relative;
-  top: -250px;
+  
+   position: static;
+  margin-top: 20px;
+  
   border-radius: 22px;
 }
 
@@ -170,7 +172,7 @@ body {
   position: relative;
   display: flex;
   align-items: center;
-  padding: 0 60px;
+ padding: 120px 20px 60px;
 }
 
 .hero-overlay {
@@ -182,7 +184,8 @@ body {
 .hero-content {
   position: relative;
   max-width: 650px;
-}
+  margin-top: 0;
+} 
 
 .hero h1 {
   font-size: 65px;
@@ -1030,15 +1033,186 @@ body {
 
 
 
+/* ================= GET IN TOUCH ================= */
+.get-in-touch {
+  background: #0a0f2c;
+  padding: 20px 20px;
+  text-align: center;
+}
+
+.get-in-touch-container {
+  max-width: 900px;
+  margin: auto;
+}
+
+.get-in-touch-title {
+  font-size: 44px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 14px;
+}
+
+.get-in-touch-subtitle {
+  font-size: 15px;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
+  .get-in-touch {
+    padding: 70px 20px;
+  }
+
+  .get-in-touch-title {
+    font-size: 32px;
+  }
+
+  .get-in-touch-subtitle {
+    font-size: 14px;
+  }
+}
 
 
+/* ================= CONTACT FORM (MOBILE FIRST) ================= */
 
+/* Full-width section */
+.contact-form-mobile {
+  background: #fff;
+  padding: 24px 20px 40px;
+  width: 100%;
+}
 
+/* Inner content width control */
+.contact-form-mobile > * {
+  max-width: 420px;
+  margin-left: auto;
+  margin-right: auto;
+}
 
+/* Heading */
+.form-tag {
+  display: block;
+  font-size: 11px;
+  font-weight: 600;
+  color: #f5b800;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+}
 
+.form-title {
+  font-size: 26px;
+  font-weight: 700;
+  color: #0b0b0b;
+  margin-bottom: 10px;
+}
 
+.form-subtitle {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
 
+/* Form layout (mobile portrait) */
+.mobile-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
 
+/* Inputs */
+.input-group label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 6px;
+  display: block;
+}
 
+.input-group input,
+.input-group select,
+.input-group textarea {
+  width: 100%;
+  padding: 13px 14px;
+  border-radius: 8px;
+  border: 1px solid #e6e6e6;
+  font-size: 14px;
+  outline: none;
+}
 
+.input-group input:focus,
+.input-group select:focus,
+.input-group textarea:focus {
+  border-color: #f5b800;
+}
 
+.input-group textarea {
+  min-height: 110px;
+  resize: none;
+}
+
+.char-text {
+  display: block;
+  font-size: 11px;
+  color: #999;
+  margin-top: 6px;
+}
+
+/* Button */
+.submit-btn {
+  margin-top: 8px;
+  background: #f5b800;
+  border: none;
+  border-radius: 8px;
+  padding: 14px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  color: #000;
+}
+
+/* ================= DESKTOP LANDSCAPE ================= */
+
+@media (min-width: 768px) {
+
+  /* Center content but keep section full width */
+  .contact-form-mobile > * {
+    max-width: 1100px;
+  }
+
+  .contact-form-mobile {
+    padding: 60px 60px 80px;
+  }
+
+  /* Landscape grid */
+  .mobile-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px 24px;
+  }
+
+  /* Full-width fields */
+  .mobile-form .input-group:nth-child(4),
+  .mobile-form .input-group:nth-child(5),
+  .mobile-form .submit-btn {
+    grid-column: span 2;
+  }
+
+  .input-group textarea {
+    min-height: 160px;
+  }
+
+  .submit-btn {
+    padding: 16px;
+    font-size: 16px;
+  }
+}
+
+/* ================= VERY SMALL PHONES ================= */
+
+@media (max-width: 360px) {
+  .form-title {
+    font-size: 24px;
+  }
+}
